@@ -65,5 +65,41 @@ else
             }
         }
     }
-}
 
+    switch (rol)
+    {
+        case 1:
+            Console.WriteLine("Rol: Estudiante");
+            break;
+        case 2:
+            Console.WriteLine("Rol: Docente");
+            break;
+        case 3:
+            Console.WriteLine("Rol: Administrativo");
+            break;
+        case 4:
+            Console.WriteLine("Rol: Externo");
+            break;
+    }
+
+    switch (paymentMethod)
+    {
+        case 1:
+            Console.WriteLine("Pago: Efectivo");
+            break;
+        case 2:
+            Console.WriteLine("Pago: Tarjeta");
+            break;
+        case 3:
+            Console.WriteLine("Pago: Transferencia");
+            break;
+    }
+
+    double totalDiscount = totalAmount * discount;
+    double totalRecargo = totalAmount * recargo;
+    double finalAmount = (totalAmount - totalDiscount) + totalRecargo;
+
+    Console.WriteLine("Descuentos aplicados: Q" + totalDiscount);
+    Console.WriteLine("Recargos aplicados: Q" + totalRecargo);
+    Console.WriteLine("Monto final a pagar: Q" + finalAmount);
+}
